@@ -36,8 +36,8 @@ echo "at /tmp/src/src/webapp/"
 ls /tmp/src/src/webapp/
 
 
-echo "at /opt/app-root/"
-ls /opt/app-root/
+echo "pwd"
+pwd
 
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
