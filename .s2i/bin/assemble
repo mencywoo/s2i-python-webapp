@@ -39,6 +39,11 @@ ls /tmp/src/src/webapp/
 echo "pwd"
 pwd
 
+
+echo "at /src"
+ls /src
+
+
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
 
