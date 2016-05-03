@@ -23,7 +23,6 @@ fi
 
 
 echo "---> Installing application specific dependencies "
-cat  /tmp/src/src/webapp/requirements.txt
 pip install -qr /tmp/src/src/webapp/requirements.txt
 
 echo "---> Installing application source..."
@@ -32,16 +31,15 @@ cp -Rf ./.s2i/bin /usr/local/s2i
 
 chmod +x /usr/local/s2i/*
 
-echo "at /tmp/src/src/webapp/"
-ls /tmp/src/src/webapp/
-
+#echo "at /tmp/src/src/webapp/"
+#ls /tmp/src/src/webapp/
 
 echo "pwd"
 pwd
 
 
-echo "at /src"
-ls /src
+echo "at /src/webapp"
+ls /src/webapp
 
 
 #echo "---> Building application from source..."
