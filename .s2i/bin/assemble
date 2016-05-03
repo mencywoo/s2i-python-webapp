@@ -32,7 +32,10 @@ cp -Rf ./.s2i/bin /usr/local/s2i
 
 chmod +x /usr/local/s2i/*
 
-
+echo "at /tmp/src/src/webapp/"
+ls /tmp/src/src/webapp/
+echo "at /opt/app-root/src/src/webapp/"
+ls /opt/app-root/src/webapp/
 
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
