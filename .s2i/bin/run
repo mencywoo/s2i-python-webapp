@@ -8,4 +8,4 @@
 # #
 #
 # #exec <start your server here>
-# exec python /opt/app-root/app.py
+exec python app.py

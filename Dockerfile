@@ -46,4 +46,4 @@ EXPOSE 8080
 # CMD ["usage"]
 
 
-# CMD ["python", "app.py"]
+CMD ["python", "app.py"]
