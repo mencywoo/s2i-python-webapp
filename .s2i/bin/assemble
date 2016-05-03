@@ -23,8 +23,8 @@ fi
 
 
 echo "---> Installing application specific dependencies "
-cat  /tmp/requirements.txt
-pip install -qr /tmp/requirements.txt
+cat  /tmp/src/requirements.txt
+pip install -qr /tmp/src/requirements.txt
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
