@@ -8,5 +8,9 @@
 #
 
 # #exec <start your server here>
+echo "current path"
+pwd
+echo "ls"
+ls
 pip install -qr webapp/requirements.txt
 exec python app.py
