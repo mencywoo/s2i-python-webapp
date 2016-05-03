@@ -25,6 +25,7 @@ RUN pip install -qr /tmp/requirements.txt
 
 # TODO (optional): Copy the builder files into /opt/app-root
 COPY ./webapp/ /opt/app-root/
+
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image sets io.openshift.s2i.scripts-url label that way, or update that label
 COPY ./.s2i/bin/ /usr/libexec/s2i
 
@@ -45,4 +46,4 @@ EXPOSE 8080
 # CMD ["usage"]
 
 
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
