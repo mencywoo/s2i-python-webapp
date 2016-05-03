@@ -25,8 +25,8 @@ echo "---> Installing application source..."
 
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
-
+pip install -qr /tmp/requirements.txt
 
 # build application artifacts
-pushd ${HOME}
-make
+#pushd ${HOME}
+#make
