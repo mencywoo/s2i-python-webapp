@@ -1,6 +1,7 @@
 
 # s2i-draft
-FROM openshift/base-centos7
+#FROM openshift/base-centos7
+FROM ubuntu:14.04
 
 # TODO: Put the maintainer name in the image metadata
 MAINTAINER Mency Woo <mency.woo@gmail.com>
@@ -23,27 +24,13 @@ RUN yum install -y ... && yum clean all -y
 RUN pip install -qr /tmp/requirements.txt
 
 
-# TODO (optional): Copy the builder files into /opt/app-root
-COPY ./webapp/ /opt/app-root/
-
-# TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image sets io.openshift.s2i.scripts-url label that way, or update that label
-COPY ./.s2i/bin/ /usr/libexec/s2i
-
-
-# TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
-RUN chown -R 1001:1001 /opt/app-root
-
-# This default user is created in the openshift/base-centos7 image
-USER 1001
-
-
-WORKDIR /opt/app-root
-
-# TODO: Set the default port for applications built using this image
-EXPOSE 8080
-
-# TODO: Set the default CMD for the image
-# CMD ["usage"]
-
-
+FROM ubuntu:14.04
+MAINTAINER Docker Education Team <education@docker.com>
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
+ADD ./webapp/requirements.txt /tmp/requirements.txt
+RUN pip install -qr /tmp/requirements.txt
+ADD ./webapp /opt/webapp/
+WORKDIR /opt/webapp
+EXPOSE 5000
 CMD ["python", "app.py"]
