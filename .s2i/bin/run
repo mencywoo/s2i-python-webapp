@@ -12,5 +12,4 @@ echo "current path"
 pwd
 echo "ls"
 ls
-pip install -qr webapp/requirements.txt
-exec python app.py
+exec python /opt/app-root/src/app.py
