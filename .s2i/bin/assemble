@@ -21,7 +21,7 @@ fi
 # fi
 
 echo "---> Installing application source..."
-pwd 
+pwd
 cat ./webapp/requirements.txt
 
 apt-get update
@@ -30,7 +30,6 @@ apt-get install -y -q python-all python-pip
 
 #echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
-pip install -qr webapp/requirements.txt
 
 # build application artifacts
 #pushd ${HOME}

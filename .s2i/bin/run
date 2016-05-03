@@ -8,4 +8,5 @@
 #
 
 # #exec <start your server here>
+pip install -qr webapp/requirements.txt
 exec python app.py
