@@ -21,6 +21,9 @@ fi
 # fi
 
 echo "---> Installing application source..."
+pwd 
+cat ./webapp/requirements.txt
+
 apt-get update
 apt-get install -y -q python-all python-pip
 #cp -Rf /tmp/src/. ./
