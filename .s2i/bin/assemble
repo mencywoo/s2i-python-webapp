@@ -21,7 +21,8 @@ fi
 # fi
 
 echo "---> Installing application source..."
-apt-get install -y -q python-all python-pip 
+apt-get update
+apt-get install -y -q python-all python-pip
 #cp -Rf /tmp/src/. ./
 
 #echo "---> Building application from source..."
