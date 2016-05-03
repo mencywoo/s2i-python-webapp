@@ -1,5 +1,7 @@
 
-IMAGE_NAME = s2i-draft
+IMAGE_NAME = s2i-python-webapp
+
+all: build
 
 build:
 	docker build -t $(IMAGE_NAME) .
