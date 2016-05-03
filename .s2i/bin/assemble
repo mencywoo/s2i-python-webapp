@@ -7,13 +7,12 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 
 
-cp -Rf ./.s2i/bin /usr/local/s2i
 
-if [[ "$1" == "-h" ]]; then
+#if [[ "$1" == "-h" ]]; then
 	# If the 's2i-python-webapp' assemble script is executed with '-h' flag,
 	# print the usage.
-	exec /usr/local/bin/s2i usage
-fi
+#	exec /usr/local/bin/s2i usage
+#fi
 
 # Restore artifacts from the previous build (if they exist).
 #
@@ -29,7 +28,10 @@ pip install -qr /tmp/requirements.txt
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
+cp -Rf ./.s2i/bin /usr/local/s2i
+
 chmod +x /usr/local/s2i/*
+
 
 
 #echo "---> Building application from source..."
